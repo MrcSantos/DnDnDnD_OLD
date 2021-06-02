@@ -1,0 +1,35 @@
+body {
+	background-color: #2c2f33;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	transition: transform .2s;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.biggerOnHover:hover {
+	transform: scale(1.1);
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.mainMenuBoxContainer {
+	position: relative;
+	height: inherit;
+}
+
+.mainMenuBoxContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

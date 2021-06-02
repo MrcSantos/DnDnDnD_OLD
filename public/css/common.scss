@@ -1,0 +1,11 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$dark:#2c2f33;
+$darker:#23272a;
+
+body {
+	background-color: $dark;
+}
+
+#MOBILE,
+#MOBILE>* {}

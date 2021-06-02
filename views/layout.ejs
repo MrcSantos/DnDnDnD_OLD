@@ -1,1 +1,41 @@
-<%- body %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="/favicon.ico">
+
+	<% if (typeof title=='undefined' ) { %>
+		<title>DnDnDnD</title>
+		<% } else { %>
+			<title>DnDnDnD - <%- title %>
+			</title>
+			<% } %>
+
+			<link rel="stylesheet" href="css/dist/common.css">
+
+				<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+					integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+				<script src="https://kit.fontawesome.com/bcd08611b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<div id="MOBILE">
+			<P>Il sito non è ancora mobile friendly</P>
+		</div>
+
+		<div id="TABLET">
+			<P>Il sito non è ancora tablet friendly</P>
+		</div>
+
+		<%- body %>
+
+	</div>
+</body>
+
+</html>

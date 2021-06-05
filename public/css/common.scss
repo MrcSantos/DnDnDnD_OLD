@@ -28,16 +28,40 @@ a {
 	@include Links();
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+}
+
+h1,
+h3,
+h5 {
+	font-weight: 600;
+}
+
+h2,
+h4,
+h6 {
+	font-weight: 400;
+}
+
+.stroke {
+	-webkit-text-stroke-color: black;
+}
+
+.red {
+	color: $red;
+}
+
 .biggerOnHover:hover {
 	transform: scale(1.1);
 }
 
-.mainMenuBoxContainer {
-	position: relative;
-	height: inherit;
-}
-
-.mainMenuBoxContent {
+.center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -64,7 +88,36 @@ a {
 
 //----------------------------------------// Mobile landscape
 
-@media screen and (max-width: 768px) and (orientation:landscape) {}
+@media screen and (max-width: 768px) and (orientation:landscape) {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 5vh 0 5vh 0;
+	}
+
+	h1,
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	h3,
+	h4 {
+		font-size: 2.5rem;
+	}
+
+	h5,
+	h6 {
+		font-size: 1.5rem;
+	}
+
+	.stroke {
+		-webkit-text-stroke-width: 1px;
+	}
+}
 
 //----------------------------------------// Tablet
 
@@ -84,8 +137,66 @@ a {
 
 //----------------------------------------// Tablet landscape
 
-@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation:landscape) {}
+@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation:landscape) {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 10vh 0 10vh 0;
+	}
+
+	h1,
+	h2 {
+		font-size: 4.5rem;
+	}
+
+	h3,
+	h4 {
+		font-size: 3.5rem;
+	}
+
+	h5,
+	h6 {
+		font-size: 2.5rem;
+	}
+
+	.stroke {
+		-webkit-text-stroke-width: 2px;
+	}
+}
 
 //----------------------------------------// Desktop
 
-@media screen and (min-width: 1200px) and (orientation:landscape) {}
+@media screen and (min-width: 1200px) and (orientation:landscape) {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 10vh 0 10vh 0;
+	}
+
+	h1,
+	h2 {
+		font-size: 5.5rem;
+	}
+
+	h3,
+	h4 {
+		font-size: 4.5rem;
+	}
+
+	h5,
+	h6 {
+		font-size: 3.5rem;
+	}
+
+	.stroke {
+		-webkit-text-stroke-width: 2px;
+	}
+}

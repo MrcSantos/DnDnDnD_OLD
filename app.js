@@ -4,14 +4,14 @@ const app = require("./configs/server").app;
 //--------------------------------------------------//--------------------------------------------------// Routes
 
 app.get('/', (req, res) => {
-	res.render("index")
+	res.render("index", { title: "HOME" })
 })
 
 //--------------------------------------------------//--------------------------------------------------// Error catch
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-	next(createError(404));
+	res.render("wip")
 });
 
 // error handler

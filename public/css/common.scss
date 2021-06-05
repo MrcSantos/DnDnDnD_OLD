@@ -1,11 +1,41 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
 $dark:#2c2f33;
 $darker:#23272a;
+$red:#cf2122;
 
 body {
 	background-color: $dark;
+	color: white;
 }
 
-#MOBILE,
-#MOBILE>* {}
+#SUPER_INFO {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	transition: transform .2s;
+
+	:hover {
+		text-decoration: none;
+	}
+
+	:visited {
+		text-decoration: none;
+	}
+}
+
+.biggerOnHover:hover {
+	transform: scale(1.1);
+}
+
+.mainMenuBoxContainer {
+	position: relative;
+	height: inherit;
+}
+
+.mainMenuBoxContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

@@ -1,19 +1,9 @@
-$dark:#2c2f33;
-$darker:#23272a;
-$red:#cf2122;
+@import "./vars";
 
-body {
-	background-color: $dark;
-	color: white;
-}
-
-#SUPER_INFO {
-	display: none;
-}
-
-a {
+@mixin Links() {
 	text-decoration: none;
 	transition: transform .2s;
+	color: white !important;
 
 	:hover {
 		text-decoration: none;
@@ -21,7 +11,21 @@ a {
 
 	:visited {
 		text-decoration: none;
+		color: white !important;
 	}
+}
+
+body {
+	background-color: $dark;
+	color: white !important;
+}
+
+#SUPER_INFO {
+	display: none;
+}
+
+a {
+	@include Links();
 }
 
 .biggerOnHover:hover {
@@ -39,3 +43,49 @@ a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+//----------------------------------------//----------------------------------------// Responsive
+
+//----------------------------------------// Mobile
+
+@media screen and (max-width: 768px) and (orientation:portrait) {
+	#MAIN {
+		display: none;
+	}
+
+	#SUPER_INFO {
+		display: block;
+	}
+
+	#SUPER_INFO::after {
+		content: "Il sito non è ancora mobile friendly, devi girare il telefono";
+	}
+}
+
+//----------------------------------------// Mobile landscape
+
+@media screen and (max-width: 768px) and (orientation:landscape) {}
+
+//----------------------------------------// Tablet
+
+@media screen and (min-width: 768px) and (orientation:portrait) {
+	#MAIN {
+		display: none;
+	}
+
+	#SUPER_INFO {
+		display: block;
+	}
+
+	#SUPER_INFO::after {
+		content: "Il sito non è ancora tablet friendly, devi girare il tablet";
+	}
+}
+
+//----------------------------------------// Tablet landscape
+
+@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation:landscape) {}
+
+//----------------------------------------// Desktop
+
+@media screen and (min-width: 1200px) and (orientation:landscape) {}

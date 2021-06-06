@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-	res.render("wip", { title: "404 Broken link" })
+	res.render("wip", { title: "404" })
 });
 
 // error handler

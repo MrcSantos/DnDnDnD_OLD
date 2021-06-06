@@ -1,7 +1,8 @@
 require('colors')
 const env = require('dotenv').config()
 const express = require('express')
-const path = require('path');
+const path = require('path')
+const favicon = require('serve-favicon');
 
 const port = process.env.PORT ?? 3000
 
@@ -11,13 +12,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(favicon(path.join(__dirname, '../public/favicon.ico')));
 
 const expressLayouts = require('express-ejs-layouts')
 
 app.set('view engine', 'ejs');
 app.set('layout', 'layout')
 app.use(expressLayouts)
-
 
 //--------------------------------------------------//--------------------------------------------------// Server listening
 

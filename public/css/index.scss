@@ -1,0 +1,64 @@
+@import "./common.scss";
+
+.mainMenuBoxWrapper {
+	height: 50vh;
+	width: 40vw;
+
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
+.mainMenuBoxContainer {
+	position: relative;
+	height: inherit;
+	width: inherit;
+	overflow: hidden;
+	border: 1px solid black !important;
+	border-radius: 10px;
+
+	>img {
+		z-index: -1;
+	}
+}
+
+//----------------------------------------//----------------------------------------// Responsive
+
+//----------------------------------------// Mobile
+
+@media screen and (max-width: 768px) and (orientation:portrait) {}
+
+//----------------------------------------// Mobile landscape
+
+@media screen and (max-width: 768px) and (orientation:landscape) {
+	#cardsWrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+//----------------------------------------// Tablet
+
+@media screen and (min-width: 768px) and (orientation:portrait) {}
+
+//----------------------------------------// Tablet landscape
+
+@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation:landscape) {
+	#cardsWrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+//----------------------------------------// Desktop
+
+@media screen and (min-width: 1200px) and (orientation:landscape) {
+	#cardsWrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+}

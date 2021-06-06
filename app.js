@@ -2,6 +2,10 @@ const app = require("./configs/server").app;
 
 //--------------------------------------------------//--------------------------------------------------// Routes
 
+app.get('/info', (req, res) => {
+	res.render("info", { title: "Info" })
+})
+
 app.get('/', (req, res) => {
 	res.render("index", { title: "HOME" })
 })

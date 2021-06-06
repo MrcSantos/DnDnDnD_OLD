@@ -2,13 +2,11 @@ const app = require("./configs/server").app;
 
 //--------------------------------------------------//--------------------------------------------------// Routes
 
-app.get('/info', (req, res) => {
-	res.render("info", { title: "Info" })
-})
+const indexRouter = require('./routes/index');
+const charactersRouter = require('./routes/characters');
 
-app.get('/', (req, res) => {
-	res.render("index", { title: "HOME" })
-})
+app.use('/characters', charactersRouter);
+app.use('/', indexRouter);
 
 //--------------------------------------------------//--------------------------------------------------// Error catch
 

@@ -1,0 +1,67 @@
+@import "./common";
+
+header {
+	border-bottom: 1px solid $red;
+	padding: 0% 20% 0% 20% !important;
+	background-color: $darker;
+
+	>* {
+		color: white;
+	}
+
+	>a {
+		@include Links();
+
+		:hover {
+			color: $red;
+		}
+
+		>span {
+			vertical-align: middle !important;
+		}
+	}
+
+	>img {
+		display: inline-block !important;
+	}
+
+	>ul {
+		margin-left: auto !important;
+
+		>li {
+			>a {
+				@include Links();
+
+				:hover {
+					color: $red;
+				}
+			}
+
+			>div>.dropdown-item {
+				color: black !important;
+			}
+		}
+	}
+}
+
+//----------------------------------------//----------------------------------------// Responsive
+
+//----------------------------------------// Mobile
+
+@media screen and (max-width: 768px) and (orientation:portrait) {}
+
+//----------------------------------------// Mobile landscape
+
+@media screen and (max-width: 768px) and (orientation:landscape) {}
+
+//----------------------------------------// Tablet
+
+@media screen and (min-width: 768px) and (orientation:portrait) {}
+
+//----------------------------------------// Tablet landscape
+
+@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation:landscape) {}
+
+//----------------------------------------// Desktop
+
+@media screen and (min-width: 1200px) and (orientation:landscape) {}

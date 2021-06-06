@@ -31,6 +31,10 @@ app.listen(port, () => {
 		return console.log(`\n[WARNING] App listening at http://localhost:${port} but environment has not been loaded correctly\nERROR: Missing SECRET env propriety\n`.yellow)
 	}
 
+	if (process.env.DB_URI == null) {
+		return console.log(`\n[WARNING] App listening at http://localhost:${port} but environment has not been loaded correctly\nERROR: Missing DB_URI env propriety\n`.yellow)
+	}
+
 	console.log(`\n[DONE] App listening at http://localhost:${port}\n`.green)
 })
 

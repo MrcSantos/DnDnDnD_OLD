@@ -4,8 +4,10 @@ const app = require("./configs/server").app;
 
 const indexRouter = require('./routes/index');
 const charactersRouter = require('./routes/characters');
+const userRouter = require('./routes/user');
 
 app.use('/characters', charactersRouter);
+app.use('/user', userRouter);
 app.use('/', indexRouter);
 
 //--------------------------------------------------//--------------------------------------------------// Error catch

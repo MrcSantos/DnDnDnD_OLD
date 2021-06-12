@@ -6,9 +6,9 @@ router.get('/info', (req, res) => {
 	res.render("info", { title: "Info" })
 });
 
-/* GET home page. */
+/* GET Home page. */
 router.get('/', (req, res) => {
-	res.render("index", { title: "Home" })
+	res.render("index", { title: "Home", user: req.user })
 });
 
 module.exports = router;

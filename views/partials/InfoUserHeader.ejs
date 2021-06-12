@@ -18,16 +18,29 @@
 
 		<li class="mx-1"></li>
 
+		<% if (typeof user=='undefined') { %>
+		<li class="nav-item">
+			<a class="nav-link" href="/user/login">
+				<span class="badge badge-danger">
+					<i class="fas fa-user-cog"></i>
+				</span>
+				<span>Accedi / Registrati</span>
+			</a>
+		</li>
+		<% } else { %>
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" id="headerUserDropDownMenu" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false">
-				<span class="badge badge-danger"><i class="fas fa-user-cog"></i></span>
-				<span>Utente</span>
+				<span class="badge badge-danger">
+					<i class="fas fa-user-cog"></i>
+				</span>
+				<span><%= user.name %> </span>
 			</a>
 			<div class="dropdown-menu" aria-labelledby="headerUserDropDownMenu">
 				<a class="dropdown-item" href="/user/settings">Impostazioni</a>
 				<a class="dropdown-item" href="/user/logout">Logout</a>
 			</div>
 		</li>
+		<% } %>
 	</ul>
 </header>

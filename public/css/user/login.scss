@@ -1,0 +1,34 @@
+@import "../common.scss";
+
+.card {
+	background-color: $darker;
+	border: 1px solid black !important;
+}
+
+input {
+	background-color: $darkest !important;
+	border: 1px solid black !important;
+	color: white !important;
+}
+
+form>div {
+	margin: 3vh 0 3vh 0;
+}
+
+button {
+	background-color: $darkest !important;
+	border: 1px solid black !important;
+	color: white !important;
+	float: right;
+}
+
+.form-control:focus {
+	border-color: $red !important;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $redder !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $redder !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+	border-color: $redder !important;
+	background-color: $red !important;
+}

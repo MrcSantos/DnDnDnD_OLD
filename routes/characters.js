@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET Info page. */
+/* GET Search page. */
 router.get('/', (req, res) => {
 	res.redirect("/characters/search")
 });
 
-/* GET home page. */
+/* GET Search page. */
 router.get('/search', (req, res) => {
 	res.render("characters/search", { title: "Characters" })
 });
